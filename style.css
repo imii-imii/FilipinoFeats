@@ -1,0 +1,259 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #fff;
+  padding: 1em 0;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #5b5bd6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #5b5bd6;
+  text-decoration: underline;
+}
+
+.hero {
+  background: url("hero-bg.png") no-repeat center center/cover;
+  padding: 6em 1em;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero span {
+  color: #5b5bd6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background: #5b5bd6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.about {
+  background: #d6ebff;
+  padding: 4em 1em;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  font: 1.2em 'Segoe UI', sans-serif;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.featured {
+  background: #fff6ea;
+  padding: 4em 1em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p strong {
+    color: #808b96;
+}
+
+.community {
+  background: url('community-bg.png') no-repeat center center/cover;
+  padding: 4em 1em;
+  height: 100%;
+}
+
+.community-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2em;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+}
+
+.community-info {
+  flex: 2;
+  background-color: #e3e3fb;
+}
+
+.community-info h2{
+  font-size: 2em;
+}
+
+.community-info ul {
+  font: "Times New Roman", Times, serif;
+}
+
+#signup-form {
+  flex: 1;
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"] {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#signup-form button {
+  padding: 0.75em;
+  background: #5b5bd6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#signupSuccess {
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  background: #0d0d26;
+  color: #eee;
+  padding: 3em 1em 1em;
+}
+
+.footer-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5em;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .about-flex,
+  .community-flex {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FilipinoFeats</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+  const form = document.getElementById("signupForm");
+  const successMessage = document.getElementById("signupSuccess");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    successMessage.style.display = "block";
+    form.reset();
+  });
+</script>
+
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo"><img src="logo.png"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover <span>FilipinoFeats</span></h1>
+      <p>"Authentic recipes, rich flavors, and culinary traditions straight from the <span>Philippines</span>."</p>
+      <a href="#featured" class="btn">Start Cooking Today!</a>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="container about-flex">
+      <div class="about-text">
+        <h2>What is <span>FilipinoFeats</span>?</h2>
+        <p>
+          At FilipinoFeats, we celebrate the rich and diverse flavors of Filipino cuisine. Our mission is to bring the heart of the Philippines to your kitchen, whether you’re an experienced cook or just starting your culinary journey. From time-honored family recipes to modern takes on classic dishes, FilipinoFeats is your go-to destination for discovering the vibrant tastes and traditions that make Filipino food so special.\
+
+Explore our curated collection of authentic recipes, learn about the history behind each dish, and connect with a community of food lovers who share your passion for Filipino cooking. Whether you’re craving a warm bowl of Sinigang, the savory goodness of Adobo, or the sweet indulgence of Halo-Halo, you’ll find everything you need to bring these dishes to life.
+Join us as we embark on a delicious adventure—one flavorful bite at a time! 🍽️✨
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="about-img.png" alt="Filipino dishes" />
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="featured">
+    <div class="container">
+      <h2>Featured Cuisines at <span>FilipinoFeats</span></h2>
+      <div class="cards">
+        <div class="card">
+          <img src="porklechonbelly.png" alt="Dish" />
+          <div class="card-content">
+          <h3>Pork Belly Lechon</h3>
+          <p><strong>Jennifer King</strong></p>
+          <p>A crispy, golden-brown roasted pork belly rolled and stuffed with garlic, lemongrass, and spices. Juicy on the inside and crackling on the outside...</p></div>
+        </div>
+        <div class="card">
+          <img src="bicolexpress.png" alt="Dish" />
+          <h3>Bicol Express</h3>
+          <p><strong>Matthew Martinez</strong></p>
+          <p>A spicy Filipino dish made with tender pork cooked in creamy coconut milk, infused with chilies, shrimp paste, and aromatics...</p>
+        </div>
+        <div class="card">
+          <img src="pinakbet.png" alt="Dish" />
+          <h3>Pinakbet</h3>
+          <p><strong>Sarah Hill</strong></p>
+          <p>A traditional Filipino vegetable dish from the Ilocos region, made with squash, eggplant, okra, bitter melon, and string beans, sautéed in shrimp paste for a rich, umami flavor...</p>
+        </div>
+        <div class="card">
+          <img src="sisig.png" alt="Dish" />
+          <h3>Sisig</h3>
+          <p><strong>Julia Lopez</strong></p>
+          <p>A sizzling Filipino dish made from chopped pork face, ears, and liver, seasoned with calamansi, chili, and onions. Served on a hot plate, it’s crispy, tangy, and savory...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="community" id="community">
+    <div class="container community-flex">
+      <div class="community-info">
+        <h2>Join the <span>FilipinoFeats</span> Community!</h2>
+        <ul>
+          Are you ready to bring the bold and comforting flavors of Filipino cuisine into your home? FilipinoFeats is more than just a collection of recipes—it’s a community for food lovers, home cooks, and culinary adventurers who want to explore the rich heritage of Filipino cooking.
+<br><br>
+🌟 Start Cooking Today! Browse our easy-to-follow recipes and recreate traditional Filipino dishes in your own kitchen.
+<br><br>
+📩 Stay Inspired! Subscribe to our newsletter for exclusive recipes, cooking tips, and cultural insights delivered straight to your inbox.
+<br><br>
+👨‍🍳 Join the Conversation! Follow us on social media, share your culinary creations, and connect with fellow food lovers who are just as passionate about Filipino food as you are. Use #FilipinoFeats to show off your dishes!
+<br><br>
+🔪 Learn & Experiment! Whether you’re new to Filipino cooking or a seasoned chef, we offer step-by-step guides, ingredient breakdowns, and expert tips to help you master every dish.
+<br><br>
+🔥 Let’s Cook Together! Don’t just read about Filipino food—experience it. Get started with one of our featured recipes today and take your taste buds on a flavorful journey through the Philippines.
+        </ul>
+      </div>
+      <div id="signup-form">
+        <h3>Sign up</h3>
+        <form>
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <label><input type="checkbox" /> I agree to the Terms of Use & Privacy Policy</label>
+          <button type="submit">Sign up</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </form>
+        <p id="signupSuccess" style="color: green; display: none; margin-top: 1em;">
+  🎉 Signup successful! Welcome to FilipinoFeats!
+</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-flex">
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <p>Explore and learn how to cook like a pro.</p>
+        <input type="email" placeholder="Enter your email" />
+        <button>Send</button>
+      </div>
+      <div class="footer-column">
+        <h4>Learn More</h4>
+        <ul>
+          <li>Our Cooks</li>
+          <li>See Our Features</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Recipes</h4>
+        <ul>
+          <li>Pasta</li>
+          <li>Dinner</li>
+          <li>Healthy</li>
+          <li>Desserts</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Shop</h4>
+        <ul>
+          <li>Gift Subscription</li>
+          <li>Send Us Feedback</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FilipinoFeats Company — All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+
+</html>
