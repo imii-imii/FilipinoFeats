@@ -182,7 +182,7 @@ nav a:hover {
   font: "Times New Roman", Times, serif;
 }
 
-#signup-form {
+.signup-form {
   flex: 1;
   background: #fff;
   padding: 2em;
@@ -190,21 +190,21 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-#signup-form form {
+.signup-form form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-#signup-form input[type="text"],
-#signup-form input[type="email"],
-#signup-form input[type="password"] {
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
   padding: 0.75em;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-#signup-form button {
+.signup-form button {
   padding: 0.75em;
   background: #5b5bd6;
   color: white;
@@ -214,10 +214,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-#signupSuccess {
-  font-weight: bold;
-  text-align: center;
-}
 
 footer {
   background: #0d0d26;
@@ -245,6 +241,26 @@ footer {
   margin-top: 2em;
   font-size: 0.9em;
   color: #bbb;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #5b5bd6;
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-20px);
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {

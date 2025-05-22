@@ -4,19 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FilipinoFeats</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <script>
-  const form = document.getElementById("signupForm");
-  const successMessage = document.getElementById("signupSuccess");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    successMessage.style.display = "block";
-    form.reset();
-  });
-</script>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -112,9 +100,9 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
 🔥 Let’s Cook Together! Don’t just read about Filipino food—experience it. Get started with one of our featured recipes today and take your taste buds on a flavorful journey through the Philippines.
         </ul>
       </div>
-      <div id="signup-form">
+      <div class="signup-form">
         <h3>Sign up</h3>
-        <form>
+        <form id="signupForm">
           <input type="text" placeholder="First Name" required />
           <input type="text" placeholder="Last Name" required />
           <input type="email" placeholder="Email" required />
@@ -123,9 +111,6 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
           <button type="submit">Sign up</button>
           <p>Already have an account? <a href="#">Log in</a></p>
         </form>
-        <p id="signupSuccess" style="color: green; display: none; margin-top: 1em;">
-  🎉 Signup successful! Welcome to FilipinoFeats!
-</p>
       </div>
     </div>
   </section>
@@ -167,6 +152,25 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
       <p>&copy; 2025 FilipinoFeats Company — All rights reserved</p>
     </div>
   </footer>
+
+<div id="toast" class="toast">🎉 Signup successful! Welcome to FilipinoFeats!</div>
+<script>
+  const form = document.getElementById("signupForm");
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    showToast();
+    form.reset();
+  });
+
+  function showToast() {
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  }
+</script>
 </body>
 
 
