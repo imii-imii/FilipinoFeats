@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FilipinoFeats</title>
   <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Alatsi&family=Alexandria:wght@100..900&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,22 +28,21 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Discover <span>FilipinoFeats</span></h1>
-      <p>"Authentic recipes, rich flavors, and culinary traditions straight from the <span>Philippines</span>."</p>
+      <h1>Discover FilipinoF<span style="color:#5b5bd6">eats</span></h1>
+      <p>"Authentic recipes, rich flavors, and culinary traditions straight from the <span style="color:blue">Phi</span><span style="color:red">lip</span><span style="color:yellow">pines</span>."</p>
       <a href="#featured" class="btn">Start Cooking Today!</a>
     </div>
   </section>
 
 
   <section class="about" id="about">
+    <h2>What is FilipinoF<span>eats</span>?</h2>
     <div class="container about-flex">
       <div class="about-text">
-        <h2>What is <span>FilipinoFeats</span>?</h2>
         <p>
-          At FilipinoFeats, we celebrate the rich and diverse flavors of Filipino cuisine. Our mission is to bring the heart of the Philippines to your kitchen, whether you’re an experienced cook or just starting your culinary journey. From time-honored family recipes to modern takes on classic dishes, FilipinoFeats is your go-to destination for discovering the vibrant tastes and traditions that make Filipino food so special.\
-
-Explore our curated collection of authentic recipes, learn about the history behind each dish, and connect with a community of food lovers who share your passion for Filipino cooking. Whether you’re craving a warm bowl of Sinigang, the savory goodness of Adobo, or the sweet indulgence of Halo-Halo, you’ll find everything you need to bring these dishes to life.
-Join us as we embark on a delicious adventure—one flavorful bite at a time! 🍽️✨
+          At FilipinoFeats, we celebrate the rich and diverse flavors of Filipino cuisine. Our mission is to bring the heart of the Philippines to your kitchen, whether you’re an experienced cook or just starting your culinary journey. From time-honored family recipes to modern takes on classic dishes, FilipinoFeats is your go-to destination for discovering the vibrant tastes and traditions that make Filipino food so special.
+          Explore our curated collection of authentic recipes, learn about the history behind each dish, and connect with a community of food lovers who share your passion for Filipino cooking. Whether you’re craving a warm bowl of Sinigang, the savory goodness of Adobo, or the sweet indulgence of Halo-Halo, you’ll find everything you need to bring these dishes to life.
+          Join us as we embark on a delicious adventure—one flavorful bite at a time! 🍽️✨
         </p>
       </div>
       <div class="about-image">
@@ -50,8 +52,8 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
   </section>
 
   <section class="featured" id="featured">
+    <h2>Featured Cuisines at FilipinoF<span>eats</span></h2>
     <div class="container">
-      <h2>Featured Cuisines at <span>FilipinoFeats</span></h2>
       <div class="cards">
         <div class="card">
           <img src="porklechonbelly.png" alt="Dish" />
@@ -85,7 +87,7 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
   <section class="community" id="community">
     <div class="container community-flex">
       <div class="community-info">
-        <h2>Join the <span>FilipinoFeats</span> Community!</h2>
+        <h2><span>Join the FilipinoFeats Community!</span></h2><br>
         <ul>
           Are you ready to bring the bold and comforting flavors of Filipino cuisine into your home? FilipinoFeats is more than just a collection of recipes—it’s a community for food lovers, home cooks, and culinary adventurers who want to explore the rich heritage of Filipino cooking.
 <br><br>
@@ -109,7 +111,6 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
           <input type="password" placeholder="Password" required />
           <label><input type="checkbox" /> I agree to the Terms of Use & Privacy Policy</label>
           <button type="submit">Sign up</button>
-          <p>Already have an account? <a href="#">Log in</a></p>
         </form>
       </div>
     </div>
@@ -118,10 +119,10 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
   <footer>
     <div class="container footer-flex">
       <div class="footer-column">
-        <h4>About Us</h4>
+        <h4>Newsletter</h4>
         <p>Explore and learn how to cook like a pro.</p>
         <input type="email" placeholder="Enter your email" />
-        <button>Send</button>
+        <button id="sendMessageBtn" type="button">Send</button>
       </div>
       <div class="footer-column">
         <h4>Learn More</h4>
@@ -154,9 +155,12 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
   </footer>
 
 <div id="toast" class="toast">🎉 Signup successful! Welcome to FilipinoFeats!</div>
+<div id="footerToast" class="toast">🎉 Subscribed to Newsletter!</div>
 <script>
   const form = document.getElementById("signupForm");
   const toast = document.getElementById("toast");
+  const sendBtn = document.getElementById("sendMessageBtn");
+  const footerToast = document.getElementById("footerToast");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -168,6 +172,17 @@ Join us as we embark on a delicious adventure—one flavorful bite at a time! �
     toast.classList.add("show");
     setTimeout(() => {
       toast.classList.remove("show");
+    }, 4000);
+  }
+
+  sendBtn.addEventListener("click", function () {
+    showFooterToast();
+  });
+
+  function showFooterToast() {
+    footerToast.classList.add("show");
+    setTimeout(() => {
+      footerToast.classList.remove("show");
     }, 4000);
   }
 </script>

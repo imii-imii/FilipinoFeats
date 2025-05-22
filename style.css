@@ -81,14 +81,17 @@ nav a:hover {
 .hero-content {
   position: relative;
   z-index: 1;
+  font-size: 2em;
+  padding-top: 10%;
 }
 
 .hero h1 {
   font-size: 3em;
+  font-family: "alatsi", sans-serif;
 }
 
-.hero span {
-  color: #5b5bd6;
+.hero p {
+  font-family: "Alexandria", sans-serif;
 }
 
 .btn {
@@ -98,7 +101,7 @@ nav a:hover {
   background: #5b5bd6;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: bold;
 }
 
@@ -117,8 +120,31 @@ nav a:hover {
 .about-text {
   flex: 1;
   font: 1.2em 'Segoe UI', sans-serif;
+  padding: 0.5em 1em;
 }
 
+.about-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-family: "Alatsi", sans-serif;
+  display: inline-block;
+}
+
+.about h2{
+  display: flex;
+  justify-content: center;
+  font-size: 3.5em;
+}
+
+.about h2 span {
+  color: #5b5bd6
+}
+
+.about-text p {
+  margin: 1em 0;
+  font-family: "Ancizar Serif", serif;
+  line-height: 1.5;
+}
 .about-image img {
   max-width: 100%;
   border-radius: 10px;
@@ -129,9 +155,19 @@ nav a:hover {
   padding: 4em 1em;
 }
 
+.featured h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5em;
+}
+
+.featured h2 span {
+  color: #5b5bd6;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2em;
   margin-top: 2em;
 }
@@ -172,14 +208,27 @@ nav a:hover {
 .community-info {
   flex: 2;
   background-color: #e3e3fb;
+  padding: 0.5em 1em;
+  border: #111 1px solid;
+  border-radius: 10px;
 }
 
 .community-info h2{
   font-size: 2em;
+  text-align: center;
+  font-family: "Alatsi", sans-serif;
+}
+
+.community-info h2 span{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.5em;
+  border: #5b5bd6 2px solid;
 }
 
 .community-info ul {
-  font: "Times New Roman", Times, serif;
+  font-family: "Ancizar Serif", serif;
+  font: 1.5em;
 }
 
 .signup-form {
@@ -241,6 +290,24 @@ footer {
   margin-top: 2em;
   font-size: 0.9em;
   color: #bbb;
+}
+
+.footer-column input[type="email"] {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width:100%;
+  margin-bottom: 10px;
+}
+
+.footer-column button {
+  padding: 0.75em;
+  background: #5b5bd6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .toast {
